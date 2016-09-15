@@ -1,6 +1,6 @@
 # Maptime Utrecht 030 #1: Leaflet & D3 workshop
 
-For the workshop click > [HERE](http://maptime-ams.github.io/Leaflet-D3-workshop/) < 
+For the workshop click > [HERE](https://maptime030.github.io/Leaflet-D3-Workshop/) < 
 
 The team from [Webmapper](http://www.webmapper.nl "What the map can be") is hosting this Maptime and will provide a workshop to share their hands-on experience in web cartography and geographic web application development.
 JavaScript powers most online maps these days. During this evening we'll cover the two primary mapping libraries [D3.js](http://d3js.org/ "Data Driven Documents") and [Leaflet.js](http://leafletjs.com/ "a JavaScript library
