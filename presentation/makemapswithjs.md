@@ -19,12 +19,12 @@
 
 # Programme
 
-* 18:30 Maptime starts
-* 18:45 Presentation
-* 19.00 Leaflet.js
-* 19:45 Break
-* 20:00 D3.js
-* 20:45 Keep working or... have a drink!
+* 19:00 Maptime starts. Open up your laptops
+* 19:15  Introduction
+* 19:30 Leaflet.js
+* 20:15 Break
+* 20:30 D3.js
+* 21:15 Keep working or have a drink! 
 
 ----
 
@@ -116,7 +116,7 @@ Contribute on [GitHub](https://github.com/Leaflet/Leaflet), Follow on [Twitter](
 
 ----
 
-# Amsterdam in Leaflet.js
+# Utrecht in Leaflet.js
 
 <iframe src="presentation/leaflet-demo.html" style="width:100%; height:400px;">
 </iframe>
@@ -152,7 +152,7 @@ Contribute on [GitHub](https://github.com/mbostock/d3), Follow on [Twitter](http
 
 ----
 
-# Amsterdam in D3.js
+# Utrecht in D3.js
 
 <iframe src="presentation/d3-demo.html" style="width:100%; height:400px;">
 </iframe>
