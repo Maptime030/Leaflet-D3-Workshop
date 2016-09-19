@@ -246,7 +246,7 @@ D3 is a open JavaScript library. D3 stands for Data Driven Documents. The data y
 	<script src="http://d3js.org/d3.v3.min.js"></script>
 	~~~~
 
-	* JavaScript libraries are often placed in the <head>. Though, it is best to place them as far as possible to the bottom of the <body>. This is much quicker while loading! 
+	* JavaScript libraries are often placed in the head. Though, it is best to place them as far as possible to the bottom of the body. This is much quicker while loading! 
 	
 
 
@@ -383,8 +383,8 @@ To 'bind' your data to the DOM is the next step. With D3 you can connect data li
 	~~~~
 
 
-### extra data
-Now we will load the vd data and visualize it as circles.
+### Extra data
+Now we will load the vd data and visualize it as circles. (from the leaflet starter workshop)
 
 1. Put the vd.geojson file in your js folder
 2. Copy the next script
