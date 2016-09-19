@@ -215,9 +215,10 @@ D3 is a open JavaScript library. D3 stands for Data Driven Documents. The data y
 * On the website of D3 you can find beautiful examples. Be inspired and have a look at their code! https://github.com/mbostock/d3/wiki/Gallery
 
 ### What do you need?
-* a text editor
 * A basic knowledge of HTML, DOM, CSS and JavaScript is useful. A short explanation can be found here: http://alignedleft.com/tutorials/d3/fundamentals
-* your browser browser, for example chrome, which has a nice debugger. 
+* A text editor for all your code, for example Brackets or Sublime text
+* internet
+* your browser, for example chrome, which has a nice debugger. 
 
 ### Your first map
 1. open your text editor 
