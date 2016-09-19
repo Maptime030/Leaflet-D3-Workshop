@@ -1,4 +1,4 @@
-For English see below
+*For English see below*
 
 # D3
 ## grafieken en kaarten maken met d3
@@ -209,10 +209,6 @@ Nu kun je bijvoorbeeld ook de vd data als circle inladen.
 
 
 # D3 English version
-
-
-
-# D3
 ## Making maps and graphs with d3
 D3 is a open JavaScript library. D3 stands for Data Driven Documents. The data you provide yourself.  D3 makes the connection between your data and the ('driven')documents, which are web-based(HTML and SVG). D3.js is developed by Mike Bostocke and completely open source and free available at Github. With D3, you can make beautiful interactive visualizations, graphs of your date but also: a map!
 
@@ -244,7 +240,7 @@ D3 is a open JavaScript library. D3 stands for Data Driven Documents. The data y
 	</html>
 	~~~~
 
-4. Go to d3js.org. Scroll down and copy the newest release. Because we already have utf-8 stated in the <head> we do not have to specify it in the script. (utf-8 makes sure all diacritical marks are placed right)
+4. Go to d3js.org. Scroll down and copy the newest release. Because we already have utf-8 stated in the *head* we do not have to specify it in the script. (utf-8 makes sure all diacritical marks are placed right)
 
 	~~~~
 	<script src="http://d3js.org/d3.v3.min.js"></script>
@@ -256,7 +252,7 @@ D3 is a open JavaScript library. D3 stands for Data Driven Documents. The data y
 
 5. Open a new file and save this as ‘main.css’ in a new folder called: ‘style’. The style folder is placed in the same folder as where your index.html file is saved. 
 6. You can also create the following folders here: ‘images’ and ‘js’. 
-Open your ‘index.html’ file and put the link to your CSS file in the <head>
+Open your ‘index.html’ file and put the link to your CSS file in the *head*
 
 	~~~~
 	<link rel="stylesheet" href="style/main.css"/>
@@ -343,7 +339,7 @@ Open your ‘index.html’ file and put the link to your CSS file in the <head>
 
  	* Next, we create our 'canvas' where we will display our map. You create a variable and give it a name, for example *svg*. 
  	* D3 is a call to the functions of D3. 
- 	* Select, selects one element of the DOM, in this case the <body>. 
+ 	* Select, selects one element of the DOM, in this case the *body*. 
  	* append, appends a SVG to the 'canvas' called *svg* 
  	* next we also provide the attributes, width and height (attr. = attributes).
  	
