@@ -1,4 +1,4 @@
-*English version below * 
+*English version below* 
 
 # leaflet tutorial
 ## mijn eigen webmap
@@ -406,11 +406,10 @@ http://www.mapcoordinates.net/en
 
 
 4. Another free tile provider is maps.stamen.com. These even provide 3 varieties:
+Or have a look at https://leaflet-extras.github.io/leaflet-providers/preview/ 
 
 	* http://tile.stamen.com/toner/{z}/{x}/{y}.png
 	* http://tile.stamen.com/watercolor/{z}/{x}/{y}.jpg
-
-Or have a look at https://leaflet-extras.github.io/leaflet-providers/preview/ 
 
 
 5. Practice with different tiles, coordinates and zoom levels to make your own base map.
@@ -519,23 +518,22 @@ Add custom markers, circles and polygons to your map. (for example your home add
 	~~~~
 
 ### geoJson-tilelayer
-geoJson is de standaard qua data type om webmaps mee te maken. Deze data kun je als kaartlaag toevoegen. 
+geoJson is the standard data type to create web maps with. You can add this data as another map layer. 
 
-* Meer weten over geoJson lees je hier https://en.wikipedia.org/wiki/GeoJSON
-* ! geoJson werkt vaak alleen op een 'local webserver', meer weten check: https://github.com/mrdoob/three.js/wiki/How-to-run-things-locally
+* Do you want to know more about geojson have a look at https://en.wikipedia.org/wiki/GeoJSON
+* ! geoJson mostly works on a 'local webserver', check: https://github.com/mrdoob/three.js/wiki/How-to-run-things-locally
 
-1. plaats het bestand vd.geojson in de js folder
-2. plaats vd.png in je imagesfolder
-3. neem het script over en check je kaart
-    
+1. Place the vd.geojson file in your js folder
+2. Plave vd.png in your img folder
+3. Copy the following script and have a look at your map    
 	~~~~          
-	//geojson zonder jQuery met xhr definieer eerst de icon
+	//geojson without jQuery wiht xhr define icon first
 				
 			var vdIcon = L.icon({
 	            iconUrl: "images/vd.png",
 	            iconSize: [20,20]
 	        });
-	//maak vervolgens een geojson laag
+	//create the geojson layer
 	        
 	       var geojson = L.geoJson(null,{
 	            pointToLayer: function(feature,latlng){
@@ -543,7 +541,7 @@ geoJson is de standaard qua data type om webmaps mee te maken. Deze data kun je 
 	            }
 	        }).addTo(map);           
 	         
-	//daarna stop je de daadwerkelijke geojson hierin
+	//add your geojson data to the layer
 	
 		var xhr = new XMLHttpRequest();
 			xhr.open('GET', encodeURI("js/vd.geojson"));
@@ -557,9 +555,9 @@ geoJson is de standaard qua data type om webmaps mee te maken. Deze data kun je 
 		xhr.send();   
 	~~~~
 	           
-### tips			
-* leer de basics van HTML, javascript bij codecademy: https://www.codecademy.com/learn/web
-* wil je een speciaal font gebruiken? check ‘google fonts’
-* leuke opdracht vind je hier http://maptimeboston.github.io/leaflet-intro/
-* lees het online boek 'leaflet tips and tricks, interactive maps made easy' by Malcolm Maclean. https://leanpub.com/leaflet-tips-and-tricks
-* bekijk ook de filmpjes over webcartography geoJson and Leaflet van Ian Muehlenhaus. https://www.youtube.com/playlist?list=PLOlUoOtyTOXilBfrGanBziU738fyJdFqn
+### Tips			
+* Learn basic HTML, CSS and JavaScript. For example at codecademy: https://www.codecademy.com/learn/web
+* Do you want to use a special font? check ‘google fonts’
+* Other nice exercise can be found at http://maptimeboston.github.io/leaflet-intro/
+* Read the on line book 'leaflet tips and tricks, interactive maps made easy' by Malcolm Maclean. https://leanpub.com/leaflet-tips-and-tricks
+* On Youtube watch films about web cartography geoJson and Leaflet of Ian Muehlenhaus. https://www.youtube.com/playlist?list=PLOlUoOtyTOXilBfrGanBziU738fyJdFqn
