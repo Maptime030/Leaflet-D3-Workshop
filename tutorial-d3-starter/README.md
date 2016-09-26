@@ -55,12 +55,12 @@ Open je ‘index.html’ bestand en zet de link naar je css bestand in je head
 	<html lang="nl">
 	<html>
 	 	<head>
-			<meta charset=“utf-8">
+			<meta charset="utf-8">
 	    	<title>Mijn eerste kaart met D3</title> 
-			<link rel="stylesheet" href=“style/main.css”/>		</head>   
+			<link rel="stylesheet" href="style/main.css"/>		</head>   
 	 	<body>
 	     	<H1>voorbeeld</H1>
-			<script src=“//d3js.org/d3.v3.min.js"></script> 
+			<script src="//d3js.org/d3.v3.min.js"></script> 
 			<script> hier komt je code </script>
 	 	</body>
 	</html>
@@ -266,13 +266,13 @@ Open your ‘index.html’ file and put the link to your CSS file in the *head*
 	<html lang="nl">
 	<html>
 	 	<head>
-			<meta charset=“utf-8">
+			<meta charset="utf-8">
 	    	<title>My first map in D3</title> 
-			<link rel="stylesheet" href=“style/main.css”/>		
+			<link rel="stylesheet" href="style/main.css"/>		
 		</head>   
 	 	<body>
 	     	<H1>Example</H1>
-			<script src=“//d3js.org/d3.v3.min.js"></script> 
+			<script src="//d3js.org/d3.v3.min.js"></script> 
 			<script> your code goes here </script>
 	 	</body>
 	</html>
