@@ -125,6 +125,7 @@ http://www.mapcoordinates.net/en
 4. Een andere gratis tegelboer is maps.stamen.com. Deze brengen zelfs drie varianten
 
 	* http://tile.stamen.com/toner/{z}/{x}/{y}.png
+	* http://tile.stamen.com/terrain/{z}/{x}/{y}.jpg
 	* http://tile.stamen.com/watercolor/{z}/{x}/{y}.jpg
 
 
@@ -409,6 +410,7 @@ http://www.mapcoordinates.net/en
 Or have a look at https://leaflet-extras.github.io/leaflet-providers/preview/ 
 
 	* http://tile.stamen.com/toner/{z}/{x}/{y}.png
+	* http://tile.stamen.com/terrain/{z}/{x}/{y}.jpg
 	* http://tile.stamen.com/watercolor/{z}/{x}/{y}.jpg
 
 
