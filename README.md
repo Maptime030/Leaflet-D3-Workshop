@@ -31,7 +31,7 @@ For the advanced users, we will have a "show and tell" to discuss current projec
 
 ###19:15  Introduction
 
-###19:30 Leaflet.js*
+###19:30 Leaflet.js
 - Making a basic map.
 - Using layers
 - Pop-ups, markers and lines.
