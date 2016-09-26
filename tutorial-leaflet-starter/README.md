@@ -529,7 +529,7 @@ geoJson is the standard data type to create web maps with. You can add this data
 2. Plave vd.png in your img folder
 3. Copy the following script and have a look at your map    
 	~~~~          
-	//geojson without jQuery wiht xhr define icon first
+	//geojson without jQuery with xhr define icon first
 				
 			var vdIcon = L.icon({
 	            iconUrl: "images/vd.png",
