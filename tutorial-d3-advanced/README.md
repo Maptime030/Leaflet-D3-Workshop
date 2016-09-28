@@ -43,7 +43,7 @@ Did you notice the 15 decimals in the GeoJSON file you downloaded? That means th
 ogr2ogr -f GeoJSON neighbourhoods.geojson neighbourhoods-pdok.geojson -lco COORDINATE_PRECISION=6 -skipfailures
 ````
 
-In QGIS, you open the GeoJSON file _neighbourhoods-pdok.geojson_ as a vector layer and save it again as GeoJSON. Make sure you specify the number of decimals in the save file menu. Now, the file size of the new file _neighbourhoods.geojson_ is 351K. Does the map load any quicker?
+In QGIS, you open the GeoJSON file _neighbourhoods-pdok.geojson_ as a vector layer and save it again as GeoJSON. Make sure you specify the number of decimals in the save file menu. Now, the file size of the new file _neighbourhoods.geojson_ is 267K. Does the map load any quicker?
 
 [Full demo 2](http://maptime030.github.io/Leaflet-D3-Workshop/tutorial-d3-advanced/2/).
 
