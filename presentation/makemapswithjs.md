@@ -62,7 +62,7 @@ Maptime exists because **community**, **inclusivity**, and **accessibility** are
 
 ----
 
-# It's not just us!
+# Not just us!
 
 ![Chapters](images/chapters.png "Maptime chapters") <!-- .element: class="plain" -->
 
@@ -135,7 +135,7 @@ Contribute on [GitHub](https://github.com/Leaflet/Leaflet), Follow on [Twitter](
 
 # Leaflet 1.0!
 
-![LeafletJS logo](images/leaflet-10- banner.png "LeafletJS 1.0") <!-- .element: class="plain" -->
+![LeafletJS logo](images/leaflet-1-banner.png "LeafletJS 1.0") <!-- .element: class="plain" -->
 
 ----
 
