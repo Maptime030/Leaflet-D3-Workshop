@@ -29,14 +29,14 @@
         </style>
     </head>
     <body>
-        <script src="http://d3js.org/d3.v3.min.js"></script>
+        <script src="https://d3js.org/d3.v3.min.js"></script>
         <script>
             var width = 910,
             height = 400;
             var projection = d3.geo.mercator()
                 .scale(75000)
                 .translate([width / 2, height / 2])
-                .center([4.9,52.36]);
+                .center([5.1096,52.0940]);
             var path = d3.geo.path()
                 .projection(projection);
             var svg = d3.select("body").append("svg")
