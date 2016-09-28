@@ -35,7 +35,7 @@ var cbs_cars = L.tileLayer.wms('http://geodata.nationaalgeoregister.nl/wijkenbuu
 
 Leaflet calculates the coordinates of the bounding box at each zoom level to supply with the request. Also, Leaflet sets the default width and height to be 256 pixels. Finally, Leaflet uses the default Web Mercator projection in its requests. See how all tiles appear as you load the map in your Web browser. For the full WMS requests, use your favorite debugging tools.
 
-[Full demo 1](http://maptime-ams.github.io/Leaflet-D3-workshop/tutorial-leaflet-advanced/1/).
+[Full demo 1](http://maptime030.github.io/Leaflet-D3-workshop/tutorial-leaflet-advanced/1/).
 
 Try and add images for the elevation data to your map. You can search the Nationaal Georegister website using the term `AHN` to find the appropriate service endpoint.
 
@@ -61,7 +61,7 @@ var cbs_cars = L.WMS.overlay('http://geodata.nationaalgeoregister.nl/wijkenbuurt
 
 Check which application appears to be more responsive: multiple small map images or one large map image?
 
-[Full demo 2](http://maptime-ams.github.io/Leaflet-D3-workshop/tutorial-leaflet-advanced/2/).
+[Full demo 2](http://maptime030.github.io/Leaflet-D3-workshop/tutorial-leaflet-advanced/2/).
 
 ### Step 3: Change the map style
 
@@ -95,7 +95,7 @@ Then we set the name of the layer that contains the neighbourhoods and specify t
 ````javascript
 params += 'typeName=wijkenbuurten2014:cbs_buurten_2014&';
 params += 'propertyName=gemeentecode,personenautos_per_huishouden,geom&';
-params += 'cql_filter=gemeentenaam \= \'Amsterdam\'';
+params += 'cql_filter=gemeentenaam \= \'Utrecht\'';
 ````
 
 We have defined a custom function to specify the cartographic style. We set up some basic look and feel first and vary the colour of each neighbourhood depending on the number of cars per household:
@@ -138,7 +138,7 @@ function getColour(d) {
 
 See the source code of the demo to find out how the cartographic style changes based on mouse interaction!
 
-[Full demo 3](http://maptime-ams.github.io/Leaflet-D3-workshop/tutorial-leaflet-advanced/3/).
+[Full demo 3](http://maptime030.github.io/Leaflet-D3-workshop/tutorial-leaflet-advanced/3/).
 
 ### Step 4: Add a reference map from PDOK in Leaflet
 
@@ -185,4 +185,4 @@ var cbs_cars = L.WMS.overlay('http://geodata.nationaalgeoregister.nl/wijkenbuurt
 }).addTo(map);
 ````
 
-[Full demo 4](http://maptime-ams.github.io/Leaflet-D3-workshop/tutorial-leaflet-advanced/4/).
+[Full demo 4](http://maptime030.github.io/Leaflet-D3-workshop/tutorial-leaflet-advanced/4/).
