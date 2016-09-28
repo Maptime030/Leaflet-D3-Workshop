@@ -4,7 +4,7 @@
 
 ### Introduction
 
-Mike Bostock started D3.js whilst working at the [New York Times](http://www.nytimes.com/). In short, D3.js takes in some data and makes a graphic out of it, be it a chart or a map, using [Scalable Vector Graphics](https://en.wikipedia.org/wiki/Scalable_Vector_Graphics). It's great for online newspapers:
+Mike Bostock started D3.js whilst working at Stanford University. In short, D3.js takes in some data and makes a graphic out of it, be it a chart or a map, using [Scalable Vector Graphics](https://en.wikipedia.org/wiki/Scalable_Vector_Graphics). It's great for online newspapers:
 
 * SVG is rendered in the browser. If many people try to access a news item, the graphics don't weigh much into the newspaper's IT infrastructure.
 * SVG is scalable. Typically, people check the news when they are on the go. They use their mobile phones with all sorts of screen sizes. The graphics can easily scale up and down without losing their sharpness.
