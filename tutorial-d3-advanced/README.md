@@ -14,12 +14,12 @@ Actually, everyone creating graphics can benefit from these advantages! So let's
 
 ### Step 1: let's get some geographic data
 
-In the [Leaflet beginners tutorial](https://github.com/maptime030/Leaflet-D3-Workshop/blob/gh-pages/tutorial-leaflet-starter/README.md) we used a static GeoJSON file to render the V&D department stores on the map. In the [Leaflet advanced tutorial](https://github.com/maptime030/Leaflet-D3-Workshop/blob/gh-pages/tutorial-leaflet-advanced/README.md), we requested the neighbourhoods of Amsterdam from PDOK using a WFS service that returned GeoJSON. Particularly for polygons, the size of the GeoJSON grows quickly. Furthermore, the coordinates typically come with many decimal places, well beyond the screen resolution of your computer display! Boundaries don't change that often, so let's use this to our advantage.
+In the [Leaflet beginners tutorial](https://github.com/maptime030/Leaflet-D3-Workshop/blob/gh-pages/tutorial-leaflet-starter/README.md) we used a static GeoJSON file to render the V&D department stores on the map. In the [Leaflet advanced tutorial](https://github.com/maptime030/Leaflet-D3-Workshop/blob/gh-pages/tutorial-leaflet-advanced/README.md), we requested the neighbourhoods of Utrecht from PDOK using a WFS service that returned GeoJSON. Particularly for polygons, the size of the GeoJSON grows quickly. Furthermore, the coordinates typically come with many decimal places, well beyond the screen resolution of your computer display! Boundaries don't change that often, so let's use this to our advantage.
 
-Let's revisit how we requested the Amsterdam neighbourhoods from [PDOK](http://www.pdok.nl) using the WFS protocol:
+Let's revisit how we requested the Utrecht neighbourhoods from [PDOK](http://www.pdok.nl) using the WFS protocol:
 
 ````
-https://geodata.nationaalgeoregister.nl/wijkenbuurten2014/ows?service=WFS&version=2.0.0&request=GetFeature&outputFormat=application/json&srsName=EPSG:4326&typeName=wijkenbuurten2014:cbs_buurten_2014&propertyName=buurtnaam,personenautos_per_huishouden,geom&cql_filter=gemeentenaam%20=%20%27Amsterdam%27
+https://geodata.nationaalgeoregister.nl/wijkenbuurten2014/ows?service=WFS&version=2.0.0&request=GetFeature&outputFormat=application/json&srsName=EPSG:4326&typeName=wijkenbuurten2014:cbs_buurten_2014&propertyName=buurtnaam,personenautos_per_huishouden,geom&cql_filter=gemeentenaam%20=%20%27Utrecht%27
 ````
 
 Let's request only the _permanent_ properties and store this in a file:
@@ -30,7 +30,7 @@ Let's request only the _permanent_ properties and store this in a file:
 Simply paste the following URL in your web browser and save it to disk as _neighbourhoods-pdok.geojson_:
 
 ````
-https://geodata.nationaalgeoregister.nl/wijkenbuurten2014/ows?service=WFS&version=2.0.0&request=GetFeature&outputFormat=application/json&srsName=EPSG:4326&typeName=wijkenbuurten2014:cbs_buurten_2014&propertyName=buurtcode,buurtnaam,geom&cql_filter=gemeentenaam%20=%20%27Amsterdam%27
+https://geodata.nationaalgeoregister.nl/wijkenbuurten2014/ows?service=WFS&version=2.0.0&request=GetFeature&outputFormat=application/json&srsName=EPSG:4326&typeName=wijkenbuurten2014:cbs_buurten_2014&propertyName=buurtcode,buurtnaam,geom&cql_filter=gemeentenaam%20=%20%27Utrecht%27
 ````
 
 [Full demo 1](http://maptime030.github.io/Leaflet-D3-Workshop/tutorial-d3-advanced/1/).
@@ -69,10 +69,10 @@ Fair enough, we did indeed cut some corners here and there in the process. So, d
 
 ### Step 4: add some colour, right on cue (uh, queue actually)!
 
-In step 2, we dropped the neighbourhood statistics from our GeoJSON file. Since we left in the neighbourhood code, we can still match the GeoJSON/TopoJSON with other data sources. However, we now simply use the same WFS protocol to only get some statistics for the Amsterdam neighbourhoods. We add in _personenautos_per_huishouden_ again and change value for the parameter `outputFormat` from _application/json_ to _csv_:
+In step 2, we dropped the neighbourhood statistics from our GeoJSON file. Since we left in the neighbourhood code, we can still match the GeoJSON/TopoJSON with other data sources. However, we now simply use the same WFS protocol to only get some statistics for the Utrecht neighbourhoods. We add in _personenautos_per_huishouden_ again and change value for the parameter `outputFormat` from _application/json_ to _csv_:
 
 ````
-https://geodata.nationaalgeoregister.nl/wijkenbuurten2014/ows?service=WFS&version=2.0.0&request=GetFeature&outputFormat=csv&srsName=EPSG:4326&typeName=wijkenbuurten2014:cbs_buurten_2014&propertyName=buurtcode,personenautos_per_huishouden&cql_filter=gemeentenaam%20=%20%27Amsterdam%27
+https://geodata.nationaalgeoregister.nl/wijkenbuurten2014/ows?service=WFS&version=2.0.0&request=GetFeature&outputFormat=csv&srsName=EPSG:4326&typeName=wijkenbuurten2014:cbs_buurten_2014&propertyName=buurtcode,personenautos_per_huishouden&cql_filter=gemeentenaam%20=%20%27Utrecht%27
 ````
 
 Put the URL in a web browser and save the output in a text file _carownership.csv_. We need to orchestrate loading two files at a time:
