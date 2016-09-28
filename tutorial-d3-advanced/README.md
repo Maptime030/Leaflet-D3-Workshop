@@ -53,7 +53,7 @@ Neighhourhoods share a lot of boundaries. So why store every boundary twice, i.e
 
 TopoJSON is not something that comes out of the box when you are working with online mapping services like the ones PDOK provides. So we have to make our own. It's well worth the effort: geometries don't change as often as all accompanying the neighbourhood statistics and the size reduction is noticeable!
 
-You can either [install TopoJSON](https://github.com/mbostock/topojson/wiki/Installation) and run it as a command line tool, or you can use online translators to create your own TopoJSON files. A favourite of ours is [MapShaper](http://www.mapshaper.org/) as you can interactively adjust the line generalisation before outputting to TopoJSON. Using the command line tool, we were able to reduce the filesize from 351K down to only 22K!
+You can either [install TopoJSON](https://github.com/mbostock/topojson/wiki/Installation) and run it as a command line tool, or you can use online translators to create your own TopoJSON files. A favourite of ours is [MapShaper](http://www.mapshaper.org/) as you can interactively adjust the line generalisation before outputting to TopoJSON. Using the command line tool, we were able to reduce the filesize from 267K down to only 22K!
 
 ````
 topojson --id-property buurtcode -p name=buurtnaam -q 1e5 -s 0.000000001 -o neighbourhoods.topojson neighbourhoods.geojson
@@ -62,7 +62,7 @@ topojson --id-property buurtcode -p name=buurtnaam -q 1e5 -s 0.000000001 -o neig
 Fair enough, we did indeed cut some corners here and there in the process. So, don't settle any border disputes based on the TopoJSON file, but for online mapping it does the job! Now we need to extend our mapping application to be able to consume TopoJSON:
 
 ````html
-<script src="http://d3js.org/topojson.v1.min.js"></script>
+<script src="https://d3js.org/topojson.v1.min.js"></script>
 ````
 
 [Full demo 3](http://maptime030.github.io/Leaflet-D3-Workshop/tutorial-d3-advanced/3/).
@@ -82,7 +82,7 @@ Put the URL in a web browser and save the output in a text file _carownership.cs
 Only when both files have been loaded by the browser, the rest of our code can be executed. Yes, asynchronous JavaScript is awesome, but orchestrating this kind of thing is a hassle. Well, not really now there is [queue.js](https://github.com/mbostock/queue), another asynchronous helper library for JavaScript:
 
 ````html
-<script src="http://d3js.org/queue.v1.min.js"></script>
+<script src="https://d3js.org/queue.v1.min.js"></script>
 ````
 
 Then load both files into your mapping application and match up the neighbourhoud statistics using the neighbourhood code:
