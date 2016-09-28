@@ -31,7 +31,7 @@
 # Webmapper
 
 * What the map can be <!-- .element: class="fragment visible" data-fragment-index="1" -->
-* Baukje, Edward and Hans <!-- .element: class="fragment visible" data-fragment-index="2" -->
+* Baukje, Niene, Edward, and Hans <!-- .element: class="fragment visible" data-fragment-index="2" -->
 * Based in Utrecht <!-- .element: class="fragment visible" data-fragment-index="3" -->
 * Geographic web application development <!-- .element: class="fragment visible" data-fragment-index="4" -->
 * Web cartography <!-- .element: class="fragment visible" data-fragment-index="5" -->
@@ -39,48 +39,48 @@
 
 ----
 
-# Maps in 2016
+# Maptime
 
 ----
 
-# Population growth Europe
+# What is Maptime?
 
-![Where the population of Europe is growing](images/europegrowing.png)  <!-- .element: class="plain" -->
-
-[Where the population of Europe is growing](http://interaktiv.morgenpost.de/europakarte/#6/52.282/5.383/en)
-
-----
-
-# Pathways
-
-![Pathways](images/pathways.png)  <!-- .element: class="plain" -->
-
-[National Geographic - Pathways](http://www.nationalgeographic.com/pathways/)
+* A time for learning about... maps
+* Hands-on
+* Beginner-focused
+* Emphasis on open source, programming, and web-mapping
 
 ----
 
-# A journey through time
-
-![A journey through time](images/journeythrutime.png) <!-- .element: class="plain" -->
-
-[A journey through time](https://map.geo.admin.ch/?topic=swisstopo&X=119230.00&Y=501950.00&zoom=6&lang=en&bgLayer=ch.swisstopo.pixelkarte-farbe&catalogNodes=1392&layers=ch.swisstopo.zeitreihen&time=1880&layers_timestamp=18801231)
+Maptime exists because **community**, **inclusivity**, and **accessibility** are important and necessary components of **positive learning experiences**.
 
 ----
 
-# The flow towards Europe
+# How did Maptime start?
 
-![The flow towars Europe](images/theflowtowardseurope.png)  <!-- .element: class="plain" -->
-
-[The flow towards Europe](http://www.lucify.com/the-flow-towards-europe/)
+![Maptime](images/maptime-email.png "Maptime email") <!-- .element: class="plain" -->
 
 ----
 
-# Lots more...
+# It's not just us!
 
-* [Maps Mania: 100 Best Interactive Maps of 2015](100 Best Interactive Maps of 2015)
-* [Visualoop: interactive maps of 2015 - part 1](http://visualoop.com/blog/90498/100-outstanding-interactive-maps-of-2015-part-1)
-* [Visualoop: interactive maps of 2015 - part 2](http://visualoop.com/blog/91072/100-outstanding-interactive-maps-of-2015-part-2)
-* [Kenneth Field: Favourite maps from 2015](http://cartonerd.blogspot.nl/2015/12/favourite-maps-from-2015.html)
+![Chapters](images/chapters.png "Maptime chapters") <!-- .element: class="plain" -->
+
+----
+
+# Pizzas?
+
+![Pizzas](images/pizza.jpg "Pizzas") <!-- .element: class="plain" -->
+
+Thanks to [Carto](https://carto.com/)!
+
+----
+
+# Next time
+
+* **Activty** Would you like to lead a demo? Tutorial? Practice a talk?
+* **Meeting space** Do you have a space to host us?
+* **Snacks** Want to bring snacks?
 
 ----
 
@@ -133,11 +133,17 @@ Contribute on [GitHub](https://github.com/Leaflet/Leaflet), Follow on [Twitter](
 
 ----
 
+# Leaflet 1.0!
+
+![LeafletJS logo](images/leaflet-10- banner.png "LeafletJS 1.0") <!-- .element: class="plain" -->
+
+----
+
 # Gimme the code...
 
 ```html
- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.0-rc.3/dist/leaflet.css" />
- <script src="https://unpkg.com/leaflet@1.0.0-rc.3/dist/leaflet.js"></script>
+ <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.0/dist/leaflet.css" />
+ <script src="https://unpkg.com/leaflet@1.0.0/dist/leaflet.js"></script>
  ```
 
 ----
@@ -176,6 +182,22 @@ Contribute on [GitHub](https://github.com/mbostock/d3), Follow on [Twitter](http
 <script src="//d3js.org/d3.v3.min.js"></script>
 <script src="https://d3js.org/d3.v4.min.js"></script>
 ```
+
+----
+
+# Next time
+
+* [Maptime Amsterdam](http://maptime-ams.github.io/) in October
+* [Maptime Utrecht](http://www.meetup.com/Maptime030-Utrecht/) in November
+
+----
+
+# Geo breakfast
+
+* Got a geo project?
+* Need some expert advice?
+* Join us for breakfast!
+* **8.30 am, 27th October**
 
 ----
 
