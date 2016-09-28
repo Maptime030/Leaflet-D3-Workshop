@@ -78,7 +78,7 @@ Thanks to [Carto](https://carto.com/)!
 
 # Next time
 
-* **Activty** Would you like to lead a demo? Tutorial? Practice a talk?
+* **Activty** Would you like to lead a demo? Tutorial?
 * **Meeting space** Do you have a space to host us?
 * **Snacks** Want to bring snacks?
 
@@ -168,8 +168,9 @@ Contribute on [GitHub](https://github.com/mbostock/d3), Follow on [Twitter](http
 # A little history
 
 * [SVGOpen](http://www.svgopen.org/2002/ "Vectorize your browser"): Conference on Interactive Vector-based Webgraphics, Online GIS and Webmapping in 2002
+* First [Protovis](http://mbostock.github.io/protovis/) came out of [Standford University](http://www.stanford.edu/) in 2009
 * Native SVG support in major browsers in 2011
-* [Mike Bostock](https://twitter.com/mbostock) started D3.js whilst at [Standford University](http://www.stanford.edu/) in 2011
+* Protovis team a.o. [Mike Bostock](https://twitter.com/mbostock) released D3.js in 2011
 * [Jason Davies](http://www.jasondavies.com/) started [d3.geo.projection](https://github.com/d3/d3-geo-projection)
 * [Elijah Meeks](http://elijahmeeks.com/) started [d3.carto](https://github.com/emeeks/d3-carto-map)
 * Check out Amsterdam-based [LocalFocus](http://www.localfocus.eu/ "Turn datasets in to stories")!
