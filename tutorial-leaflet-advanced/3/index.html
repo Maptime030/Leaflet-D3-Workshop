@@ -25,7 +25,7 @@
         <script>
 
             var map = new L.Map('map-canvas', {
-                center: [52.37,4.9],
+                center: [52.0940,5.1096],
                 zoom: 13,
             });
 
@@ -81,7 +81,7 @@
             params += 'propertyName=buurtnaam,personenautos_per_huishouden,geom&';
 
             // Just the neighbourhoods within the municipality of Amsterdam
-            params += 'cql_filter=gemeentenaam \= \'Amsterdam\'';
+            params += 'cql_filter=gemeentenaam \= \'Utrecht\'';
 
             // Ajax without jQuery ;-)
             var xhr = new XMLHttpRequest();
