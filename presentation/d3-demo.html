@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>D3 demo &mdash; Maptime AMS #9</title>
+        <title>D3 demo &mdash; Maptime Utrecht #1</title>
         <meta name="description" content="D3 demo">
         <meta name="author" content="Edward Mac Gillavry">
         <meta name="apple-mobile-web-app-capable" content="yes">
@@ -59,13 +59,13 @@
             var rateById = d3.map();
 
             var quantize = d3.scale.quantize()
-                .domain([0, 1.5])
+                .domain([0, 30])
                 .range(d3.range(9).map(function(i) { return "q" + i + "-9"; }));
 
             var projection = d3.geo.mercator()
-                .scale(75000)
+                .scale(100000)
                 .translate([width / 2, height / 2])
-                .center([4.9,52.36]);
+                .center([5.1096,52.0940]);
 
             var path = d3.geo.path()
                 .projection(projection);
@@ -76,16 +76,16 @@
 
             queue()
                 .defer(d3.json, "neighbourhoods.topojson")
-                .defer(d3.csv, "carownership.csv", function(d) { rateById.set(d.id, +d.rate);})
+                .defer(d3.csv, "elderly.csv", function(d) { rateById.set(d.id, +d.rate);})
                 .await(ready);
 
-            function ready(error, amsterdam) {
+            function ready(error, utrecht) {
                 if (error) throw error;
 
                 svg.append("g")
                     .attr("class", "neighbourhoods")
                     .selectAll("path")
-                    .data(topojson.feature(amsterdam, amsterdam.objects.neighbourhoods).features)
+                    .data(topojson.feature(utrecht, utrecht.objects.neighbourhoods).features)
                     .enter().append("path")
                     .attr("class", function(d) {
                         if (rateById.get(d.id) >= 0) {
@@ -105,7 +105,7 @@
                     });
 
                 svg.append("path")
-                    .datum(topojson.mesh(amsterdam, amsterdam.objects.neighbourhoods, function(a, b) { return a.id/100 ^ b.id/100; }))
+                    .datum(topojson.mesh(utrecht, utrecht.objects.neighbourhoods, function(a, b) { return a.id/100 ^ b.id/100; }))
                     .attr("class", "districts")
                     .attr("d", path);
             };
