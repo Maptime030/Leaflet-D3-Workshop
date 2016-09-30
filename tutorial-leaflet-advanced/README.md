@@ -8,11 +8,11 @@
 
 There is one caveat: maps from Google, Bing, OpenStreetMap come in the [Web Mercator](https://en.wikipedia.org/wiki/Web_Mercator) projection, whereas for the Netherlands the projection used is Rijksdriehoekstelsel (RD) or Amersfoort New. Each spatial reference system is identified by a code. The code for Web Mercator is [EPSG:3857](http://epsg.io/3857). The code for Amersfoort New is [EPSG:28992](http://epsg.io/28992). A third spatial reference system to keep in mind is WGS-84, the coordinates used by GPS systems that are recorded in longitude and latitude, identified by the code [EPSG:4326](http://epsg.io/4326).
 
-For this tutorial, we will be using [Leaflet.js 1.0.0 beta 2](http://mourner.github.io/Leaflet/reference.html):
+For this tutorial, we will be using [Leaflet.js 1.0.1](http://leafletjs.com/reference-1.0.0.html):
 
 ````html
-<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v1.0.0-beta.2/leaflet.css" />
-<script src="http://cdn.leafletjs.com/leaflet/v1.0.0-beta.2/leaflet.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
 ````
 
 ### Step 1: Simply add a map image from PDOK
@@ -163,6 +163,14 @@ var RD = new L.Proj.CRS( 'EPSG:28992','+proj=sterea +lat_0=52.15616055555555 +lo
 );
 ````
 
+And tell Leaflet to make use of the Amersfoort New projection by adding the `crs` to the Map object. E.g.:
+
+````javascript
+var map = new L.Map('map-canvas', {
+    crs: RD
+});
+````
+
 We're all set to add the reference map _BRT Achtergrondkaart_ from PDOK using the TMS protocol:
 
 ````javascript
@@ -180,8 +188,8 @@ Can you mix and match from the previous steps to add map images or geographic ob
 var cbs_cars = L.WMS.overlay('http://geodata.nationaalgeoregister.nl/wijkenbuurten2014/wms', {
     'layers': 'cbs_buurten_2014',
     'styles': 'wijkenbuurten_thema_buurten_gemeentewijkbuurt_gemiddeld_aantal_autos_per_huishouden',
-    'srs': 'EPSG:28992'
-    'format': 'image/png',
+    'srs': 'EPSG:28992',
+    'format': 'image/png'
 }).addTo(map);
 ````
 
