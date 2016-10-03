@@ -1,8 +1,8 @@
 *For English see below*
 
 # D3
-## grafieken en kaarten maken met d3
-is een open javascript bibliotheek. D3 staat voor Data Driven Documents. De data zoek je zelf. De documents zijn web-based (HTML en SVG) en D3 maakt de verbinding tussen de data en de documents(‘drivin’). D3js. is ontwikkeld door Mike Bostock en is volledig open source en vrij beschikbaar op GitHub. Je kunt er prachtige, ook interactieve visualisatie, grafieken van data maken, maar natuurlijk ook een kaart.
+## grafieken en kaarten maken met D3
+is een open javascript bibliotheek. D3 staat voor Data Driven Documents. De data zoek je zelf. De documents zijn web-based (HTML en SVG) en D3 maakt de verbinding tussen de data en de documents(‘driven’). D3.js is ontwikkeld door Mike Bostock en is volledig open source en vrij beschikbaar op GitHub. Je kunt er prachtige, ook interactieve visualisatie, grafieken van data maken, maar natuurlijk ook een kaart.
 
 * Op de D3 website vind je prachtige voorbeelden, laat je hier vooral inspireren en gebruik de code! https://github.com/mbostock/d3/wiki/Gallery
 
@@ -70,39 +70,39 @@ Open je ‘index.html’ bestand en zet de link naar je css bestand in je head
 8. Vervang “hier komt je code” met het volgende
 
 	~~~~
-		<script> 
-			//Width and height
-			var w = 500;
-			var h = 300;
+	<script> 
+		//Width and height
+		var w = 500;
+		var h = 300;
 
-			//Define map projection
-			var projection = d3.geo.mercator()
-						.center([ 30, 40 ])
-						.translate([ w/2, h/2 ])
-						.scale([ w/4 ]);
+		//Define map projection
+		var projection = d3.geo.mercator()
+					.center([ 30, 40 ])
+					.translate([ w/2, h/2 ])
+					.scale([ w/4 ]);
 
-			//Define path generator
-			var path = d3.geo.path()
-						.projection(projection);
+		//Define path generator
+		var path = d3.geo.path()
+					.projection(projection);
 
-			//Create SVG
-			var svg = d3.select("body")
-						.append("svg")
-						.attr("width", w)
-						.attr("height", h);
-			</script>
+		//Create SVG
+		var svg = d3.select("body")
+					.append("svg")
+					.attr("width", w)
+					.attr("height", h);
+	</script>
 	~~~~
 
 9. Wat heb je gedaan?
 	* // de regel achter de slashes is het commentaar/verduidelijking. Dit geeft de stappen weer wat je aan het doen bent.
 	* ; altijd belangrijk geeft het einde van dit stukje code.
-	* Als eerste heb je de width en height gedefineerd. 
+	* Als eerste heb je de width en height gedefinieerd. 
 	* var staat voor variabele. 
 	
 	~~~~
 	//Width and height
-		var w = 500;
-		var h = 300;
+	var w = 500;
+	var h = 300;
 	~~~~
 	
  	* vervolgens kiezen we de projectie van de kaart. Mercator is de meest gebruikte
@@ -112,18 +112,18 @@ Open je ‘index.html’ bestand en zet de link naar je css bestand in je head
 
 	~~~~
 	//Define map projection
-	 	var projection = d3.geo.mercator()
-			 	.center([30, 40])
-				.translate([ w/2, h/2 ])
-				.scale([ w/7 ]);
+ 	var projection = d3.geo.mercator()
+		 	.center([30, 40])
+			.translate([ w/2, h/2 ])
+			.scale([ w/7 ]);
 	~~~~
 				
 	* Zodra de variable projection gemaakt is kunnen we de geografische data omzetten naar SVG dmv path 
 	
 	~~~~
 	//Define path generator
-		var path = d3.geo.path()
-				.projection(projection);
+	var path = d3.geo.path()
+			.projection(projection);
 	~~~~			
 
  	* Vervolgens maken we het ‘canvas’ waarin we de kaart tonen. Je maakt een variabele, die noem je bijv. SVG. 
@@ -134,10 +134,10 @@ Open je ‘index.html’ bestand en zet de link naar je css bestand in je head
  	
  	~~~~
 	//Create SVG
-		var svg = d3.select("body")
-				.append("svg")
-				.attr("width", w)
-				.attr("height", h);
+	var svg = d3.select("body")
+			.append("svg")
+			.attr("width", w)
+			.attr("height", h);
 	~~~~
 
 
@@ -145,23 +145,25 @@ Open je ‘index.html’ bestand en zet de link naar je css bestand in je head
 Data inladen, ‘binden’ is de volgende stap. Je kunt D3 koppelen met data van .csv of in dit geval .json files. 
 
 1. plaats het bestand landen.json in je js folder
-2. neem het volende script over
+2. neem het volgende script over
 
 	~~~~
+	// create a new SVG group element
+	var layerLanden = svg.append('g');
+	
 	//Load in GeoJSON data
-		d3.json("/js/landen.json", function(json) {
-
-	//Bind data and create one path per GeoJSON feature
-			svg.selectAll("path")
-				   .data(json.features)
-				   .enter()
-				   .append("path")
-				   .attr("d", path);
-			});	
+	d3.json("/js/landen.json", function(json) {
+		//Bind data and create one path per GeoJSON feature
+		layerLanden.selectAll("path")
+			   .data(json.features)
+			   .enter()
+			   .append("path")
+			   .attr("d", path);
+	});
 	~~~~			
 			
 3. check in je browser of je een wereldkaart ziet
-4. Kijk op https://github.com/mbostock/d3/wiki/Geo-Projections voor verschillende projecties
+4. Kijk op https://github.com/d3/d3-3.x-api-reference/blob/master/Geo-Projections.md voor verschillende projecties
 5. Je kunt nu met de projection en zoom spelen 
 6. probeer bijvoorbeeld in te zoomen op Nederland
 
@@ -175,29 +177,31 @@ Data inladen, ‘binden’ is de volgende stap. Je kunt D3 koppelen met data van
 ### extra data
 Nu kun je bijvoorbeeld ook de vd data als circle inladen.
 
-1. plaats de vd.geojson in je js folder
+1. plaats de vd.geojson (uit de Leaflet starter workshop) in je js folder
 2. neem het script over 
 	
 	~~~~
-	d3.json("js/vd.geojson", function(data){
-                    
-     //Create a circle for each city
-		svg.selectAll("circle")
+	// create a new SVG group element
+	var layerVD = svg.append('g');
+	
+	d3.json("js/vd.geojson", function(data){        
+    //Create a circle for each city
+		layerVD.selectAll("circle")
   				.data(data.features)
   				.enter()
  	  			.append("circle")
   				.attr("cx", function(d) {
-    		//[0] returns the first coordinate (x) of the projected value
+    				//[0] returns the first coordinate (x) of the projected value
   					return projection(d.geometry.coordinates)[0];
-  					})
-  					.attr("cy", function(d) {
-    		//[1] returns the second coordinate (y) of the projected value
+  				})
+  				.attr("cy", function(d) {
+    				//[1] returns the second coordinate (y) of the projected value
   					return projection(d.geometry.coordinates)[1];
-  					})
+  				})
   				.attr("r", 5)
   				.style("fill", "blue")
   				.style("opacity", 0.75);
-		});
+	});
 	~~~~              
                    
 3. verander de kleur speel met de styles 
@@ -210,7 +214,7 @@ Nu kun je bijvoorbeeld ook de vd data als circle inladen.
 
 # D3 English version
 ## Making maps and graphs with d3
-D3 is a open JavaScript library. D3 stands for Data Driven Documents. The data you provide yourself.  D3 makes the connection between your data and the ('driven')documents, which are web-based(HTML and SVG). D3.js is developed by Mike Bostocke and completely open source and free available at Github. With D3, you can make beautiful interactive visualizations, graphs of your date but also: a map!
+D3 is a open JavaScript library. D3 stands for Data Driven Documents. The data you provide yourself.  D3 makes the connection between your data and the ('driven')documents, which are web-based(HTML and SVG). D3.js is developed by Mike Bostock and completely open source and free available at Github. With D3, you can make beautiful interactive visualizations, graphs of your date but also: a map!
 
 * On the website of D3 you can find beautiful examples. Be inspired and have a look at their code! https://github.com/mbostock/d3/wiki/Gallery
 
@@ -241,7 +245,7 @@ D3 is a open JavaScript library. D3 stands for Data Driven Documents. The data y
 	</html>
 	~~~~
 
-4. Go to d3js.org. Scroll down and copy the newest release. Because we already have utf-8 stated in the *head* we do not have to specify it in the script. (utf-8 makes sure all diacritical marks are placed right)
+4. Go to d3js.org. Scroll down and download the v3 release (`d3.v3.min.js`). Or use the snippet provided below. Because we already have utf-8 stated in the *head* we do not have to specify it in the script. (utf-8 makes sure all diacritical marks are placed right)
 
 	~~~~
 	<script src="http://d3js.org/d3.v3.min.js"></script>
@@ -282,27 +286,27 @@ Open your ‘index.html’ file and put the link to your CSS file in the *head*
 8. Replace “your code goes here” with:
 
 	~~~~
-		<script> 
-			//Width and height
-			var w = 500;
-			var h = 300;
+	<script> 
+		//Width and height
+		var w = 500;
+		var h = 300;
 
-			//Define map projection
-			var projection = d3.geo.mercator()
-						.center([ 30, 40 ])
-						.translate([ w/2, h/2 ])
-						.scale([ w/4 ]);
+		//Define map projection
+		var projection = d3.geo.mercator()
+					.center([ 30, 40 ])
+					.translate([ w/2, h/2 ])
+					.scale([ w/4 ]);
 
-			//Define path generator
-			var path = d3.geo.path()
-						.projection(projection);
+		//Define path generator
+		var path = d3.geo.path()
+					.projection(projection);
 
-			//Create SVG
-			var svg = d3.select("body")
-						.append("svg")
-						.attr("width", w)
-						.attr("height", h);
-			</script>
+		//Create SVG
+		var svg = d3.select("body")
+					.append("svg")
+					.attr("width", w)
+					.attr("height", h);
+	</script>
 	~~~~
 
 9. What did you do?
@@ -324,18 +328,18 @@ Open your ‘index.html’ file and put the link to your CSS file in the *head*
 
 	~~~~
 	//Define map projection
-	 	var projection = d3.geo.mercator()
-			 	.center([30, 40])
-				.translate([ w/2, h/2 ])
-				.scale([ w/7 ]);
+ 	var projection = d3.geo.mercator()
+		 	.center([30, 40])
+			.translate([ w/2, h/2 ])
+			.scale([ w/7 ]);
 	~~~~
 				
 	* When the projection is created we can transform our geographic data to SVG with the help of D3.geo.path 
 	
 	~~~~
 	//Define path generator
-		var path = d3.geo.path()
-				.projection(projection);
+	var path = d3.geo.path()
+			.projection(projection);
 	~~~~			
 
  	* Next, we create our 'canvas' where we will display our map. You create a variable and give it a name, for example *svg*. 
@@ -346,10 +350,10 @@ Open your ‘index.html’ file and put the link to your CSS file in the *head*
  	
  	~~~~
 	//Create SVG
-		var svg = d3.select("body")
-				.append("svg")
-				.attr("width", w)
-				.attr("height", h);
+	var svg = d3.select("body")
+			.append("svg")
+			.attr("width", w)
+			.attr("height", h);
 	~~~~
 
 
@@ -360,20 +364,22 @@ To 'bind' your data to the DOM is the next step. With D3 you can connect data li
 2. Copy the following script, below the previous script (index.html)
 
 	~~~~
+	// create a new SVG group element
+	var layerLanden = svg.append('g');
+	
 	//Load in GeoJSON data
-		d3.json("/js/landen.json", function(json) {
-
-	//Bind data and create one path per GeoJSON feature
-			svg.selectAll("path")
-				   .data(json.features)
-				   .enter()
-				   .append("path")
-				   .attr("d", path);
-			});	
+	d3.json("/js/landen.json", function(json) {
+		//Bind data and create one path per GeoJSON feature
+		layerLanden.selectAll("path")
+			   .data(json.features)
+			   .enter()
+			   .append("path")
+			   .attr("d", path);
+	});	
 	~~~~			
 			
 3. check in your browser if you see a world map
-4. Have a look at https://github.com/mbostock/d3/wiki/Geo-Projections for different projections
+4. Have a look at https://github.com/d3/d3-3.x-api-reference/blob/master/Geo-Projections.md for different projections
 5. You can also play around with the projection, centre and zoom level. 
 6. For example, try to zoom in on the Netherlands!
 
@@ -391,25 +397,27 @@ Now we will load the vd data and visualize it as circles. (from the leaflet star
 2. Copy the next script
 	
 	~~~~
-	d3.json("js/vd.geojson", function(data){
-                    
-     //Create a circle for each city
-		svg.selectAll("circle")
+	// create a new SVG group element
+	var layerVD = svg.append('g');
+	
+	d3.json("js/vd.geojson", function(data){                  
+    //Create a circle for each city
+		layerVD.selectAll("circle")
   				.data(data.features)
   				.enter()
  	  			.append("circle")
   				.attr("cx", function(d) {
-    		//[0] returns the first coordinate (x) of the projected value
+    				//[0] returns the first coordinate (x) of the projected value
   					return projection(d.geometry.coordinates)[0];
-  					})
-  					.attr("cy", function(d) {
-    		//[1] returns the second coordinate (y) of the projected value
+  				})
+  				.attr("cy", function(d) {
+    				//[1] returns the second coordinate (y) of the projected value
   					return projection(d.geometry.coordinates)[1];
-  					})
+  				})
   				.attr("r", 5)
   				.style("fill", "blue")
   				.style("opacity", 0.75);
-		});
+	});
 	~~~~              
                    
 3. Change the colours and play around with the style attributes! 
