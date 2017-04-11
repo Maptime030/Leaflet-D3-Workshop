@@ -26,6 +26,6 @@ At the end of this workshop, you will have your own web page with an interactive
 
 Your laptop with:
 
-* a Web Browser, like Firefox, Chrome or Safari.
+* a web browser, like Firefox, Chrome or Safari.
 * a text editor, like Sublime text, Brackets or even Notepad.
 * a Github account. Create one at www.github.com 
