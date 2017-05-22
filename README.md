@@ -1,6 +1,6 @@
 # Workshop Webmapping for Beginners
 
-For the workshop can be found in the [wiki]().
+For the workshop can be found in the [wiki](https://github.com/NieneB/Webmapping_for_beginners/wiki).
 
 The team from [Webmapper](http://www.webmapper.nl "What the map can be") developed this workshop to share their hands-on experience in web cartography and geographic web application development
 JavaScript powers most on-line maps these days. During this evening we'll cover the two primary mapping libraries [D3.js](http://d3js.org/ "Data Driven Documents") and [Leaflet.js](http://leafletjs.com/ "a JavaScript library
