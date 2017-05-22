@@ -67,4 +67,4 @@ Some background information, extra information or debug tips are shown in grey :
 
 So:
 
-:arrow_right: **Start with reading the [[Introduction Leaflet]]**
+:arrow_right: **Go to the [wiki](https://github.com/NieneB/Webmapping_for_beginners/wiki) now!**
